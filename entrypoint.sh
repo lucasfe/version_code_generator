@@ -1,6 +1,5 @@
 #!/bin/sh -l
-cd /github/workspace
 ls /github/workspace
-count=$(git rev-list --count HEAD)
+count=1
 result=`expr $count + $1`
 echo "::set-output name=code::$result"
