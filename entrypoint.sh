@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+count=$(git rev-list --count HEAD)
+result=`expr $count + $1`
+echo "::set-output name=code::$result"

@@ -1,16 +1,16 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Version code generator'
+description: 'Generates an auto incremental version code based on git commits'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  offset:  # id of input
+    description: 'In case you need to increase or decrease the version code'
     required: true
-    default: 'World'
+    default: '0'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  code: # id of output
+    description: 'The version code generated'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.offset }}
