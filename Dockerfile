@@ -3,7 +3,7 @@ FROM alpine:3.10
 RUN apk update
 RUN apk add git
 
-ADD ./* $HOME/src/
+ADD ./* /src/
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
