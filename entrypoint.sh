@@ -12,6 +12,10 @@ tag_context=${TAG_CONTEXT:-repo}
 
 cd ${GITHUB_WORKSPACE}/${source}
 
+count=$(git rev-list --count HEAD)
+result=`expr $count + $1`
+echo "::set-output name=code::$result"
+
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
 pre_release="true"
