@@ -1,16 +1,20 @@
-name: 'Github Tag Bump'
-description: 'Bump and push git tag on merge'
-author: 'Nick Sjostrom'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+name: 'Version code generator'
+description: 'Generates version codes based on commit count'
+author: 'Lucas Ferreira'
+inputs:
+    offset:  # id of input
+        description: 'The offset can be used to increase or decrease the current version count'
+        required: false
+        default: '0'
 outputs:
-  new_tag:
-    description: 'Generated tag'
-  tag:
-    description: 'The latest tag after running this action'
-  part:
-    description: 'The part of version which was bumped'
+    time: # id of output
+    description: 'The time we greeted you'
 branding:
-  icon: 'git-merge'  
+  icon: 'hash'  
   color: 'purple'
+runs:
+using: 'docker'
+image: 'Dockerfile'
+args:
+    - ${{ inputs.offset }}
+  
