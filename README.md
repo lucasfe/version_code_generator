@@ -14,12 +14,13 @@ This action generates a version code based on the commit count of your current b
 
 The version code generated.
 
-## Example usage
-
+# Usage
 name: Version code generator
 
 When using action checkout please specify the input parameter fetch-depth: 0 in order to retrieve all commits
 
+<!-- start usage -->
+```yaml
 on: [push]
 
 jobs:
@@ -35,3 +36,6 @@ jobs:
   uses: lucasfe/android_version_bump@3.9.3
   with:
     offset: '-3'
+```
+<!-- end usage -->
+
