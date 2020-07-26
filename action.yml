@@ -2,19 +2,19 @@ name: 'Version code generator'
 description: 'Generates version codes based on commit count'
 author: 'Lucas Ferreira'
 inputs:
-    offset:  # id of input
-        description: 'The offset can be used to increase or decrease the current version count'
-        required: false
-        default: '0'
+  offset:  # id of input
+    description: 'Offset used to increase or decrease the version code'
+    required: true
+    default: '0'
 outputs:
-    time: # id of output
-    description: 'The time we greeted you'
-branding:
-  icon: 'hash'  
-  color: 'purple'
+  code: # id of output
+    description: 'the code generated'
 runs:
-using: 'docker'
-image: 'Dockerfile'
-args:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
     - ${{ inputs.offset }}
-  
+branding:
+    icon: 'hash'  
+    color: 'purple'
+      
