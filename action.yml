@@ -1,16 +1,16 @@
-# action.yml
-name: 'Version code generator'
-description: 'Generates an auto incremental version code based on git commits'
-inputs:
-  offset:  # id of input
-    description: 'In case you need to increase or decrease the version code'
-    required: true
-    default: '0'
-outputs:
-  code: # id of output
-    description: 'The version code generated'
+name: 'Github Tag Bump'
+description: 'Bump and push git tag on merge'
+author: 'Nick Sjostrom'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.offset }}
+outputs:
+  new_tag:
+    description: 'Generated tag'
+  tag:
+    description: 'The latest tag after running this action'
+  part:
+    description: 'The part of version which was bumped'
+branding:
+  icon: 'git-merge'  
+  color: 'purple'
