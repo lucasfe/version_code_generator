@@ -1,0 +1,18 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate new version code
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Get version code
+      id: version_code
+      uses: lucasfe/android_version_bump@3.9.4
+    # Use the output from the `hello` step
+    - name: Get the latest version code
+      run: echo "Version code generated -> ${{ steps.version_code.outputs.code }}"
