@@ -4,7 +4,7 @@ author: 'Lucas Ferreira'
 inputs:
   offset:  # id of input
     description: 'Offset used to increase or decrease the version code'
-    required: true
+    required: false
     default: '0'
 outputs:
   code: # id of output
