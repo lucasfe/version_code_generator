@@ -38,7 +38,7 @@ jobs:
         fetch-depth: 0
 - name: Get version code
   id: version_code
-  uses: lucasfe/android_version_bump@3.9.3
+  uses: lucasfe/version_code_generator@v1.0.0
   with:
     offset: '-3'
 ```
