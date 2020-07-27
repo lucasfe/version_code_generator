@@ -1,6 +1,6 @@
 # Version code generator action
 
-[![Build Status](https://github.com/lucasfe/version_code_generator/workflows/build/badge.svg)](https://github.com/anothrNick/github-tag-action/workflows/Bump%20version/badge.svg)
+[![Build Status](https://github.com/lucasfe/version_code_generator/workflows/build/badge.svg)](https://github.com/lucasfe/version_code_generator/workflows/build/badge.svg)
 [![Stable Version](https://img.shields.io/github/v/tag/lucasfe/version_code_generator)](https://img.shields.io/github/v/tag/lucasfe/version_code_generator)
 [![Latest Release](https://img.shields.io/github/v/release/lucasfe/version_code_generator?color=%233D9970)](https://img.shields.io/github/v/release/lucasfe/version_code_generator?color=%233D9970)
 
